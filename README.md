@@ -74,3 +74,5 @@ B. Algorithm Analysis:
 So total Time complexity is  O(n+1)+ O(n log n)+O(1)
 
 • and by discarding non-dominant terms --> Total Time Complexity is O(n Log n)
+
+BY: Eman Elsayesd - Basma Ashoura - Habiba Adawi || section 2
