@@ -1,0 +1,48 @@
+import math
+
+def get_parent(child):
+    """
+    Calculates the index of the parent node in a binary heap.
+
+    Args:
+        child: Index of the child node.
+
+    Returns:
+        Index of the parent node.
+    """
+    parent = math.floor(child / 2)
+    if parent == 0:
+        return 0  # Parent of root node is itself
+    else:
+        return parent - 1
+
+    
+
+def heap_sort(arr):
+    """
+    Performs heap sort on the given array.
+
+    Args
+    """
+    n = len(arr)
+    n_arr = []
+    # Build a max-heap
+    for i in range(0, n-1):
+        child = i
+        n_arr.append(arr[i])
+        while child > 0:
+            parent = get_parent(child)
+            if n_arr[child] > n_arr[parent]:
+                n_arr[child], n_arr[parent] = n_arr[parent], n_arr[child]  # Swap
+                child = parent
+
+    
+    return n_arr
+
+    
+
+
+arr = [0, 1, 2, 3, 4]
+arr = heap_sort(arr)
+
+print(arr)  # Output: [0, 1, 2, 3, 4]
